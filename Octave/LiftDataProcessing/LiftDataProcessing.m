@@ -1,5 +1,6 @@
 # -------------------------------------------------------------------
 # Airfoil project, IB-Program
+# LiftDataProcessing
 #
 # DESCRIPTION
 #  - visualize lift force data of all runs in both raw form and comparable,
@@ -11,7 +12,7 @@
 #
 # AUTHORSHIP
 # Ivan Baklanov, vanyabaklanov26@gmail.com
-# Script Version: 0.2 1:1
+# Script Version: 0.3 1:1      the 1:1 means that this script is for that airfoil
 #
 # Date: 18-Jul-2020, 14:45
 #
@@ -81,12 +82,11 @@ grid
 
 # DATA EXPLORATION and chosen ?dataset?
 
-# 'magic number' like 15 came from manual data exploration using command window
+# 'magic number' came from manual data exploration using command window
 # it is only possible using my eyes first
 
-######THE VALUES BELOW ARE TEMPORARY!!!
-
-idx= 400:900;
+idx= 400:900;     # this index represents the values that you want to process
+                  # in my case, the values before 400 and after 900 are 0
 
  f1b= f1(idx);
  f2b= f2(idx);
@@ -94,29 +94,19 @@ idx= 400:900;
  f4b= f4(idx);
  f5b= f5(idx);
 
-### below is FOR REFERENCE ONLY
-#f1b=f1(f1>16);
-
-# plot((f2(f2>20))(60:end), 'o')
-#f2b= f2(f2>20);
-#f2b= f2b(60:end);
-
-#plot(f3(f3>21), 'o')
-#f3b= f3(f3>21);
-
 ################################################################################
 ### PROCESSED data vvv
 
 s1b= 1:length(f1b);
 s2b= 1:length(f2b);
-s3b= 1:length (f3b);
-s4b= 1:length (f4b);
-s5b= 1:length (f5b);
+s3b= 1:length(f3b);
+s4b= 1:length(f4b);
+s5b= 1:length(f5b);
 
 #means:
 
 mf1 = mean(f1b); 
-mf1v= mf1 * ones(1, length(s1b));
+mf1v= mf1 * ones(1, length(s1b));      # this makes the mean line for the graph ( the v stands for vector).
 
 mf2 = mean(f2b); 
 mf2v= mf2 * ones(1, length(s2b));
@@ -172,9 +162,11 @@ grid
 
 figure(3) #below are histograms
 
+histaxis= ([17 36 0 250]);    # change this to whichever axis you want for the histograms
+
 subplot(511)
 hist(f1b)
-#axis([17 36 0 250])   #axis for all histograms; makes them visually comparable
+axis(histaxis)   #axis for all histograms; makes them visually comparable
 title('')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
@@ -182,7 +174,7 @@ grid
 
 subplot(512)
 hist(f2b)
-#axis([17 36 0 250])
+axis(histaxis)
 title('')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
@@ -190,7 +182,7 @@ grid
 
 subplot(513)
 hist(f3b)
-#axis([17 36 0 250])
+axis(histaxis)
 title('')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
@@ -198,7 +190,7 @@ grid
 
 subplot(514)
 hist(f4b)
-#axis([17 36 0 250])
+axis(histaxis)
 title('')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
@@ -206,7 +198,7 @@ grid
 
 subplot(515)
 hist(f5b)
-#axis([17 36 0 250])
+axis(histaxis)
 title('')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
