@@ -30,7 +30,7 @@ void setup() {
   Serial.begin(9600);  
   Serial.println("Press T to tare");
   scale.set_scale(-1066650.00);  //Calibration Factor obtained from first sketch
-  scale.tare();             //Reset the scale to 0  'guo
+  //scale.tare();             //Reset the scale to 0  'guo
 }
  
 //=============================================================================================
