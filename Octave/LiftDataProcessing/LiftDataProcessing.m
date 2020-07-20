@@ -11,7 +11,7 @@
 # REFERENCES
 #
 # AUTHORSHIP
-# Ivan Baklanov, vanyabaklanov26@gmail.com
+# Ivan B., 68478358+inbv@users.noreply.github.com
 # Script Version: 0.3 1:1      the 1:1 means that this script is for that airfoil
 #
 # Date: 18-Jul-2020, 14:45

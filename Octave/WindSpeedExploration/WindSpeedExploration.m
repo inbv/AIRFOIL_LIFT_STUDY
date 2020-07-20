@@ -8,7 +8,7 @@
 # REFERENCES
 #
 # AUTHORSHIP
-# Ivan Baklanov, ... @gmail.com
+# Ivan B., 68478358+inbv@users.noreply.github.com
 # Script Version: 0.1.1
 #
 # Date: 16-Jul-2020, 14:45
