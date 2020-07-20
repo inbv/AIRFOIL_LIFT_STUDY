@@ -12,7 +12,7 @@
 #
 # AUTHORSHIP
 # Ivan Baklanov, vanyabaklanov26@gmail.com
-# Script Version: 0.3.1 1:1      the 1:1 means that this script is for that airfoil
+# Script Version: 0.3.4 1:1      the 1:1 means that this script is for that airfoil
 #
 # Date: 19-Jul-2020, 17:13
 #
@@ -179,7 +179,7 @@ grid
 
 figure(3) #below are histograms
 
-histaxis= ([20 35 0 250]);    # change this to whichever axis you want for the histograms
+histaxis= ([19 35 0 300]);    # change this to whichever axis you want for the histograms
 
 subplot(611)
 hist(f1b)
@@ -251,8 +251,14 @@ disp([snr1 snr2 snr3 snr4 snr5 snr6])
 
 ################################################################################
 
+###RPM FROM OUTSIDE SOURCE vvv
 
-
+rpm1= mean([4260, 4128])
+rpm2= mean([4336, 4065])
+rpm3= mean([4216, 3945])
+rpm4= mean([4000, 3885])
+rpm5= mean([3960, 3825])
+rpm6= mean([4015, 3800])
 
 
 
