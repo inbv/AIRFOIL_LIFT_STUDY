@@ -33,7 +33,16 @@
 
 #Specific Files
 Octave/WindSpeedExploration/Data
+
 Octave/LiftDataProcessing/18Jul2020_01
 Octave/LiftDataProcessing/19Jul2020_01
+Octave/LiftDataProcessing/20Jul2020_01
+Octave/LiftDataProcessing/21Jul2020_01
+Octave/LiftDataProcessing/22Jul2020_01
+
+Octave/AirflowStraightenerTest
+
+Octave/5-2temp
+
 Octave/RPMexploration/19Jul2020_01
 Octave/RPMexploration/description.xlsx
