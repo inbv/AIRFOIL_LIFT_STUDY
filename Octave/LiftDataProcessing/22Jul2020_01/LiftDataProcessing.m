@@ -24,11 +24,11 @@ close all force   # close all figures
 clear             # clean RAM
 
 # NOTE: files ARE w/o extensions
-run01= '21Jul2020_01/run01/run01';        # my data file name, put data file in space!
-run02= '21Jul2020_01/run02/run02';        # 20Jul is 
-run03= '21Jul2020_01/run03/run03';
-run04= '21Jul2020_01/run04/run04';
-run05= '21Jul2020_01/run05/run05';
+run01= 'run01/run01';        # my data file name, put data file in space!
+run02= 'run02/run02';        # 20Jul is 
+run03= 'run03/run03';
+run04= 'run04/run04';
+run05= 'run05/run05';
 
 # load my data
 

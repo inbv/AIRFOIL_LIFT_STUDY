@@ -12,9 +12,10 @@
 #
 # AUTHORSHIP
 # Ivan B., 68478358+inbv@users.noreply.github.com
-# Script Version: 0.4.1 1:1      the 1:1 means that this script is for that airfoil
+# Script Version: 0.4.2 1:1      the 1:1 means that this script is for that airfoil
 #                 RPM, current, voltage, and motor temperature update
 # Date: 18-Jul-2020, 14:45
+# Update date: 21-Jul-2020, 15:27
 #
 # -------------------------------------------------------------------
 
@@ -24,11 +25,11 @@ close all force   # close all figures
 clear             # clean RAM
 
 # NOTE: files ARE w/o extensions
-run01= '21Jul2020_01/run01/run01';        # my data file name, put data file in space!
-run02= '21Jul2020_01/run02/run02';        # 20Jul is 
-run03= '21Jul2020_01/run03/run03';
-run04= '21Jul2020_01/run04/run04';
-run05= '21Jul2020_01/run05/run05';
+run01= 'run01/run01';        # my data file name, put data file in space!
+run02= 'run02/run02';       
+run03= 'run03/run03';
+run04= 'run04/run04';
+run05= 'run05/run05';
 
 # load my data
 
@@ -37,6 +38,7 @@ f2= load(run02);
 f3= load(run03);
 f4= load(run04);
 f5= load(run05);  
+
 
 ################################################################################
 #RAW DATA
@@ -150,7 +152,7 @@ plot(s1b, f1b, 'r', s1b, mf1v, 'r',
    s3b, f4b, 'b', s4b, mf4v, 'b',
    s4b, f3b, 'm', s3b, mf3v, 'm',
    s5b, f5b, 'y', s5b, mf5v, 'y')
-axis ([0 700 0 45])  # I want to set such an axis for all my 5 plots. 
+axis ([0 700 0 32])  # I want to set such an axis for all my 5 plots. 
                      # the mean includes all the values of each dataset.
 xlabel ('Sample Number')
 ylabel ('Lift Force, g, (+/-) 0.5g')
@@ -162,7 +164,7 @@ grid
 
 figure(3) #below are histograms
 
-histaxis= ([20 45 0 250]);    # change this to whichever axis you want for the histograms
+histaxis= ([15 32 0 250]);    # change this to whichever axis you want for the histograms
 
 subplot(511)
 hist(f1b)
@@ -287,5 +289,9 @@ tempm3= mean([]);
 tempm4= mean([]);
 tempm5= mean([]);
 
+
+figure(4)
+plot(f1)
+axis([0 800 0 50])
 #------------------------------------ END --------------------------------------
 
