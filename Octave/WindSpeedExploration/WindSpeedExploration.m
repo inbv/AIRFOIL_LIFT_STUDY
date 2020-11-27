@@ -21,9 +21,9 @@ close all force   # close all figures
 clear             # clean RAM
 
 # NOTE: files ARE w/o extensions
-run01= 'WindSpeedExploration01-1';        # my data file name
-run02= 'WindSpeedExploration02-1';        # my data file name
-run03= 'WindSpeedExploration03-1';        # my data file name
+run01= 'Data/WindSpeedExploration01-1';        # my data file name
+run02= 'Data/WindSpeedExploration02-1';        # my data file name
+run03= 'Data/WindSpeedExploration03-1';        # my data file name
 
 # load my data
 
