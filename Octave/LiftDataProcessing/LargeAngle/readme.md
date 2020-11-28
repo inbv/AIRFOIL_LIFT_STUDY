@@ -46,5 +46,5 @@ which is essentially the mean value divided by the stnadard deviation. These val
 
 ## Make it Your Own
 
-This code is best for visualizing the a dataset in different ways, but would have to be modified a substantial amount   
+This code is best for visualizing a dataset in different ways, but would have to be modified a substantial amount   
 in order to make adjustments to another setting. In any case, sections are labelled with comments for easy editing. 
