@@ -18,7 +18,8 @@ This code:
 
 Here is the figure resulting from this code for my particular dataset:
 
-![LiftDataProcessingA Figure](Figure21.png)
+![LiftDataProcessingA Figure](Figure21.png)<br/>
+*LiftDataProcessingA Outputted Figure*<br/><br/>
 
 ## Make it Your Own
 
