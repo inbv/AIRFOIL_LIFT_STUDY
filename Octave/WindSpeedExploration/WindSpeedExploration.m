@@ -9,9 +9,9 @@
 #
 # AUTHORSHIP
 # Ivan B., 68478358+inbv@users.noreply.github.com
-# Script Version: 0.1.1
+# Script Version: 0.1.2
 #
-# Date: 16-Jul-2020, 14:45
+# Date: 15-Oct-2020, 10:11
 #
 # -------------------------------------------------------------------
 
@@ -21,9 +21,9 @@ close all force   # close all figures
 clear             # clean RAM
 
 # NOTE: files ARE w/o extensions
-run01= 'Data/WindSpeedExploration01-1';        # my data file name
-run02= 'Data/WindSpeedExploration02-1';        # my data file name
-run03= 'Data/WindSpeedExploration03-1';        # my data file name
+run01= 'r20.txt';        # my data file name
+run02= 'r19.txt';        # my data file name
+run03= 'r18.txt';        # my data file name
 
 # load my data
 
@@ -44,6 +44,7 @@ plot(f1)
 title ('50% Motor Load Capacity Raw Lift Force Data')
 xlabel('Sample Number')
 ylabel('Lift Force, g, (+/-) 0.5g')
+axis([0 500 3 7])                          ####When axis is specified, only applies to that dataset
 grid
 
 subplot(312)
@@ -51,6 +52,7 @@ plot(f2)
 title ('75% Motor Load Capacity Raw Lift Force Data')
 xlabel('Sample Number')
 ylabel('Lift Force, g, (+/-) 0.5g')
+axis([0 350 9 16])
 grid
 
 subplot(313)
@@ -58,6 +60,7 @@ plot(f3)
 title ('100% Motor Load Capacity Raw Lift Force Data')
 xlabel('Sample Number')
 ylabel('Lift Force, g, (+/-) 0.5g')
+axis([0 300 22 34])
 grid
 
 ################################################################################
@@ -66,14 +69,20 @@ grid
 
 # 'magic number' like 15 came from manual data exploration using command window
 # it is only possible using my eyes first
-f1b=f1(f1>16);
+#f1b=f1(f1>16);
 
 # plot((f2(f2>20))(60:end), 'o')
-f2b= f2(f2>20);
-f2b= f2b(60:end);
+#f2b= f2(f2>20);
+#f2b= f2b(60:end);
 
 #plot(f3(f3>21), 'o')
-f3b= f3(f3>21);
+#f3b= f3(f3>21);
+
+#####################
+
+f1b=f1;
+f2b=f2;
+f3b=f3;
 
 ################################################################################
 
@@ -106,7 +115,7 @@ figure(2)
 plot(s1b, f1b, 'r', s1b, mf1v, 'r', 
    s2b, f2b, 'g', s2b, mf2v, 'g', 
    s3b, f3b, 'b', s3b, mf3v, 'b')
-axis ([0 600 0 40])  # I want to set such an axis for all my 3 plots. Should be noted r & b are cut off!
+axis ([0 500 0 34])  # I want to set such an axis for all my 3 plots. Should be noted r & b are cut off!
                      # buuuuut the mean includes all the values of each dataset.
 xlabel ('Sample Number')
 ylabel ('Lift Force, g, (+/-) 0.5g')
@@ -114,12 +123,13 @@ title('Wind Speed Exploration. Motor Load: Red = 50% , Green = 75%, Blue = 100%'
 grid                 # If you want full data, change axis to 800!!
 
 
+histogramaxis= ([3 34 0 400]);
 
 figure(3) #below are histograms
 
 subplot(311)
 hist(f1b)
-axis([17 36 0 250])   #axis for all histograms; makes them visually comparable
+axis(histogramaxis)   #axis for all histograms; makes them visually comparable
 title('Histogram of Motor at 50% Load Capacity')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
@@ -127,7 +137,7 @@ grid
 
 subplot(312)
 hist(f2b)
-axis([17 36 0 250])
+axis(histogramaxis)
 title('Histogram of Motor at 75% Load Capacity')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
@@ -135,7 +145,7 @@ grid
 
 subplot(313)
 hist(f3b)
-axis([17 36 0 250])
+axis(histogramaxis)
 title('Histogram of Motor at 100% Load Capacity')
 xlabel('Lift Force, g, (+/-) 0.5g')
 ylabel ('Number of Samples')
