@@ -14,4 +14,4 @@ For this project, I used an Arduino Uno, so I used a [pre-existing code](https:/
 Apart from Arduino IDE code, I also used the multi-tool scripting software Octave, which I used to visualize and process my data. For this code, I learned with the help of my father, and then wrote many different version of the code until it fit my needs and outputted a good result. 
 
 ## Other 
-If you are interested in this project, you can [watch this video](#) where I outline and explain my processing and analysis. 
+If you are interested in this project, you can [watch this video](https://www.youtube.com/watch?v=vjzbLZjJvRk&feature=youtu.be) where I outline and explain my processing and analysis. 
